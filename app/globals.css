@@ -1,15 +1,35 @@
 @import "tailwindcss";
 
-@theme inline {
-  --color-ink: #0f172a;
-  --color-surface: #f4f6fa;
-  --color-line: #e2e8f0;
-  --color-muted: #64748b;
-  --font-display: var(--font-poppins);
-  --font-sans: var(--font-inter);
+:root {
+  --background: #1f0b03;
+  --foreground: #FFF8DD;
 }
 
 body {
-  background: #ffffff;
-  color: var(--color-ink);
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-familjen-grotesk), sans-serif;
+  overflow-x: hidden;
+}
+
+.font-heading {
+  font-family: 'Post No Bills Colombo', sans-serif;
+  font-weight: 800;
+}
+
+.font-body {
+  font-family: var(--font-familjen-grotesk), sans-serif;
+}
+
+/* Gabungan Efek Pancaran Garis Retro & Pendaran Gradasi Figma Anda */
+.bg-robot-sunburst {
+  background: 
+    linear-gradient(180deg, rgba(31,11,3,0.5) 0%, #560C05 100%),
+    radial-gradient(circle at 80% 15%, rgba(224, 159, 62, 0.25) 0%, transparent 50%),
+    radial-gradient(circle at 10% 65%, rgba(158, 42, 43, 0.3) 0%, transparent 60%),
+    repeating-conic-gradient(from 0deg at 50% 30%, #2e1207 0deg 12deg, #1f0b03 12deg 24deg);
+}
+
+.shadow-heading-team {
+  text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.64);
 }

@@ -1,29 +1,30 @@
-import { Inter, Poppins } from "next/font/google";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+// src/app/layout.js
+import { Familjen_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const poppins = Poppins({
+// Memanggil Familjen Grotesk secara aman lewat Next.js Font
+const familjenGrotesk = Familjen_Grotesk({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-poppins",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-familjen-grotesk",
 });
 
 export const metadata = {
-  title: "Baseline Padel",
-  description: "Lapangan padel indoor dan outdoor di Surabaya.",
+  title: "Robotic Research Team",
+  description: "Website resmi tim riset robotik.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="id">
-      <body
-        className={`${inter.variable} ${poppins.variable} font-sans antialiased`}
-      >
-        <Navbar />
+      <head>
+        {/* Trik Jitu: Memanggil Google Font Post No Bills Colombo langsung melalui CDN Link agar 100% Bebas Error */}
+        <link rel="preconnect" href="https://googleapis.com" />
+        <link rel="preconnect" href="https://gstatic.com" crossOrigin="anonymous" />
+        <link href="https://googleapis.com/css2?family=Post+No+Bills+Colombo:wght@800&display=swap" rel="stylesheet" />
+      </head>
+      <body className={`${familjenGrotesk.variable} font-sans antialiased`}>
         {children}
-        <Footer />
       </body>
     </html>
   );

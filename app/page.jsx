@@ -1,15 +1,21 @@
+// app/page.js
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Fitur from "@/components/Fitur";
-import Harga from "@/components/Harga";
-import CTA from "@/components/CTA";
+import AboutOurRobot from "@/components/AboutOurRobot";
+import Specifications from "@/components/Specifications";
+import OurTeam from "@/components/OurTeam";
+import FooterSections from "@/components/FooterSections";
 
 export default function Home() {
   return (
-    <main>
+    // Memanggil kelas latar belakang pendaran cahaya oranye figma terintegrasi
+    <main className="min-h-screen bg-robot-sunburst overflow-x-hidden pt-20">
+      <Navbar />
       <Hero />
-      <Fitur />
-      <Harga />
-      <CTA />
+      <AboutOurRobot /> 
+      <Specifications />
+      <OurTeam />
+      <FooterSections />
     </main>
   );
 }

@@ -1,33 +1,39 @@
-import Image from "next/image";
-import Button from "@/components/Button";
-
+// components/Hero.jsx
 export default function Hero() {
   return (
-    <section id="lapangan" className="px-5 pb-5 md:px-8 md:pb-8">
-      <div className="relative flex min-h-120 flex-col items-center justify-center overflow-hidden rounded-3xl px-6 py-12 text-center text-white md:min-h-160">
-        <Image
-          src="/images/hero.jpg"
-          alt="Lapangan padel indoor dengan dinding kaca"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative flex flex-col items-center gap-6">
-          <h1 className="max-w-4xl font-display text-4xl leading-tight font-medium md:text-6xl">
-            Main Padel, Kapan Pun Kamu Siap.
-          </h1>
-          <p className="max-w-xl text-base text-white/80 md:text-lg">
-            Lapangan indoor dan outdoor di tengah kota, buka sampai tengah
-            malam. Booking dalam satu menit.
-          </p>
-          <Button variant="light" href="#harga">
-            Booking Lapangan
-          </Button>
+    <section className="relative w-full min-h-screen bg-transparent text-white flex flex-col justify-center items-center px-6 py-16 md:flex-row md:justify-between max-w-7xl mx-auto gap-8 pt-24">
+      
+      {/* Sisi Kiri: Informasi Tim & Robot */}
+      <div className="flex flex-col space-y-4 max-w-xl text-center md:text-left">
+        <span className="text-orange-500 font-bold tracking-widest uppercase text-xs">
+          ROBOTIC RESEARCH TEAM
+        </span>
+        {/* Post No Bills Colombo */}
+        <h1 className="font-heading text-6xl md:text-8xl text-white leading-none uppercase">
+          TEAM NAME
+        </h1>
+        <h2 className="font-heading text-3xl md:text-5xl text-orange-500 uppercase tracking-wide">
+          Robot Name
+        </h2>
+        {/* Familjen Grotesk */}
+        <p className="text-gray-400 text-sm md:text-base max-w-md">
+          Tagline goes here. Tuliskan deskripsi singkat mengenai visi atau semboyan tim robotik Anda di sini.
+        </p>
+        <div className="pt-4 flex justify-center md:justify-start">
+          <button className="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-full transition-all duration-300 shadow-lg shadow-orange-600/20 flex items-center gap-2 group text-xs uppercase tracking-wider">
+            Learn More 
+            <span className="group-hover:translate-x-1 transition-transform">→</span>
+          </button>
         </div>
       </div>
+
+      {/* Sisi Kanan: Bingkai Gambar Futuristik */}
+      <div className="w-full max-w-lg aspect-[4/3] bg-white/5 backdrop-blur-sm border-2 border-white/10 rounded-2xl shadow-2xl overflow-hidden flex items-center justify-center relative group hover:border-orange-500/50 transition-colors duration-500">
+        <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-orange-500 rounded-tr-2xl pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-orange-500 rounded-bl-2xl pointer-events-none"></div>
+        <p className="text-gray-500 text-xs font-medium tracking-wide">[ Tempat Gambar Robot Utama ]</p>
+      </div>
+
     </section>
   );
 }
-
