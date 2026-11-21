@@ -4,18 +4,20 @@ import Image from "next/image";
 
 export default function AboutOurRobot() {
   return (
-    <section
+        <section
       id="about"
-      className="w-full text-[#FFF8DD] relative overflow-x-clip flex flex-col justify-between bg-[#1c0703] -mt-10 sm:-mt-12 lg:-mt-14 z-20"
+      /* Diubah menjadi bg-transparent agar tidak memunculkan blok hitam di bawah lekukan garis */
+      className="w-full text-[#FFF8DD] relative overflow-x-clip flex flex-col justify-between bg-transparent -mt-10 sm:-mt-12 lg:-mt-14 z-20"
     >
-      {/* ================= 1. BG ================= */}
+      {/* ================= 1. BACKGROUND DASAR TUNGGAL ================= */}
+      {/* Menggunakan object-fill tanpa geseran berlebih agar sudutnya menyatu pas dengan garis bawah */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
         <Image
           src="/images/Group 48098070.png"
           alt="About Our Robot Background"
           fill
           sizes="100vw"
-          className="object-cover object-center scale-110 translate-x-1 translate-y-3 sm:translate-x-1 sm:translate-y-4 lg:translate-x-2 lg:translate-y-11"
+          className="object-fill"
           priority
         />
       </div>
@@ -47,8 +49,8 @@ export default function AboutOurRobot() {
 
       </div>
 
-            {/* ================= 3. GARIS PEMBATAS BAWAH ================= */}
-       <div className="w-[104%] absolute bottom-0 -left-2 translate-x-1 translate-y-0 lg:translate-x-4 lg:-translate-y-3 z-30 pointer-events-none leading-none">
+      {/* ================= 3. GARIS PEMBATAS BAWAH ================= */}
+      <div className="w-full absolute bottom-0 left-0 translate-y-0 z-30 pointer-events-none leading-none">
         <Image
           src="/images/Rectangle 17732981.png"
           alt="About Bottom Divider"
@@ -57,6 +59,7 @@ export default function AboutOurRobot() {
           className="w-full h-auto object-fill block"
         />
       </div>
+
     </section>
   );
 }
