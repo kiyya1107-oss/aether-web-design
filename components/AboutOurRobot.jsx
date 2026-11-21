@@ -4,18 +4,19 @@ import Image from "next/image";
 
 export default function AboutOurRobot() {
   return (
-    <section
+        <section
       id="about"
-      className="w-full text-[#FFF8DD] relative overflow-x-clip flex flex-col justify-between bg-[#1c0703] -mt-6 sm:-mt-10 lg:-mt-14 z-20"
+      /* Di HP ditarik lebih naik (-mt-10) agar langsung menyatu di bawah Hero */
+      className="w-full text-[#FFF8DD] relative overflow-x-clip flex flex-col justify-between bg-[#1c0703] -mt-10 sm:-mt-12 lg:-mt-14 z-20"
     >
-      {/* ================= 1. BACKGROUND DASAR TUNGGAL (Digeser ke kanan dengan lg:translate-x-2) ================= */}
+      {/* ================= 1. BACKGROUND DASAR TUNGGAL ================= */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
         <Image
           src="/images/Group 48098070.png"
           alt="About Our Robot Background"
           fill
           sizes="100vw"
-          className="object-cover object-center scale-110 translate-x-4 translate-y-3 sm:translate-x-4 sm:translate-y-6 lg:translate-x-10 lg:translate-y-12"
+          className="object-cover object-center scale-110 translate-x-0 translate-y-0 sm:translate-x-1 sm:translate-y-4 lg:translate-x-2 lg:translate-y-11"
           priority
         />
       </div>
@@ -67,8 +68,8 @@ export default function AboutOurRobot() {
         </div>
       </div>
 
-      {/* ================= 3. GARIS PEMBATAS BAWAH (Digeser ke kanan dengan translate-x-2) ================= */}
-      <div className="w-[102%] absolute bottom-0 -left-2 translate-x-10 translate-y-1 z-30 pointer-events-none leading-none">
+            {/* ================= 3. GARIS PEMBATAS BAWAH (Mentok penuh dari pinggir kiri layar) ================= */}
+      <div className="w-full absolute bottom-0 left-0 translate-y-1 z-30 pointer-events-none leading-none">
         <Image
           src="/images/Rectangle 17732981.png"
           alt="About Bottom Divider"

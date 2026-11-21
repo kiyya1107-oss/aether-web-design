@@ -49,8 +49,7 @@ export default function FooterSections() {
             {/* FORMULIR GET IN TOUCH */}
       <section 
       id="contact" 
-      className="w-full relative -mt-3 sm:-mt-4 py-14 sm:py-20 lg:py-24 bg-[#2F0C0A] overflow-hidden">
-        {/* Gambar Group 48098140.png ditarik memanjang vertikal (h-[135%]) dengan object-fill */}
+      className="w-full relative -mt-12 sm:-mt-16 lg:-mt-20 z-20 py-16 sm:py-24 lg:py-28 bg-[#2F0C0A] overflow-hidden">
         <div className="absolute inset-x-0 -top-[15%] bottom-0 pointer-events-none z-0">
           <Image
             src="/images/Group 48098140.png"
@@ -129,9 +128,9 @@ export default function FooterSections() {
         </div>
       </section>
 
-            {/* FOOTER BAWAH (Ditarik naik dengan -mt-16 sm:-mt-20 lg:-mt-24 & z-20 agar menutup pita gelap kosong) */}
-      <footer className="w-full relative -mt-16 sm:-mt-20 lg:-mt-24 z-20 py-6 sm:py-10 lg:py-12 bg-[#6D2118]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-8 lg:px-12 flex flex-row items-center justify-between gap-4">
+          {/* FOOTER BAWAH (Full lebar ujung ke ujung & logo lebih ke pojok kiri) */}
+      <footer className="w-full relative -mt-12 sm:-mt-16 lg:-mt-20 z-20 py-7 sm:py-11 lg:py-14 bg-[#702218] rounded-b-[28px] sm:rounded-b-[44px] lg:rounded-b-[56px] shadow-2xl">
+        <div className="w-full px-4 sm:px-6 lg:px-8 flex flex-row items-center justify-between gap-4">
           <Image
             src="/images/Rectangle 17733019.png"
             alt="AETHER Footer Logo"
@@ -173,4 +172,6 @@ export default function FooterSections() {
     </div>
   );
 }
+
+
 
