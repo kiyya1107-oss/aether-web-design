@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #1f0b03;
+  --background: #110502;
   --foreground: #FFF8DD;
 }
 
@@ -21,15 +21,11 @@ body {
   font-family: var(--font-familjen-grotesk), sans-serif;
 }
 
-/* Gabungan Efek Pancaran Garis Retro & Pendaran Gradasi Figma Anda */
-.bg-robot-sunburst {
-  background: 
-    linear-gradient(180deg, rgba(31,11,3,0.5) 0%, #560C05 100%),
-    radial-gradient(circle at 80% 15%, rgba(224, 159, 62, 0.25) 0%, transparent 50%),
-    radial-gradient(circle at 10% 65%, rgba(158, 42, 43, 0.3) 0%, transparent 60%),
-    repeating-conic-gradient(from 0deg at 50% 30%, #2e1207 0deg 12deg, #1f0b03 12deg 24deg);
+/* Mengembalikan kelembutan gradasi linear dasar seluruh halaman website */
+.bg-robot-glow {
+  background: linear-gradient(180deg, #27120a 0%, #160703 50%, #110502 100%);
 }
 
-.shadow-heading-team {
+.shadow-figma-team {
   text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.64);
 }

@@ -1,51 +1,76 @@
-// components/Specifications.jsx
+"use client";
+
+import Image from "next/image";
+
 export default function Specifications() {
   const specs = [
     {
       title: "Mechanical",
-      icon: "⚙️",
-      desc: "Perancangan sasis, lengan robot, dan sistem mekanis menggunakan kalkulasi presisi tinggi."
+      icon: "/images/ant-design_setting-filled.png",
     },
     {
       title: "Electrical",
-      icon: "⚡",
-      desc: "Integrasi sensor, aktuator, mikrokontroler, dan manajemen daya yang efisien."
+      icon: "/images/game-icons_electric.png",
     },
     {
       title: "Programming",
-      icon: "💻",
-      desc: "Pengembangan algoritma kontrol, automasi, AI, dan pemrosesan data secara real-time."
-    }
+      icon: "/images/streamline_bracket.png",
+    },
   ];
 
   return (
-    <section className="w-full bg-transparent text-white px-6 py-16 max-w-7xl mx-auto">
-      {/* Judul Section menggunakan Post No Bills Colombo ExtraBold */}
-      <h2 className="font-heading text-4xl md:text-6xl mb-10 border-b-2 border-orange-600/30 pb-4 text-[#f3f4f6] uppercase tracking-wider">
-        Specifications
-      </h2>
+    <section
+      id="robot"
+      className="w-full relative overflow-hidden pt-16 pb-20 sm:pt-20 sm:pb-24 lg:pt-24 lg:pb-28 -mt-4 sm:-mt-6 lg:-mt-8 z-10 bg-transparent"
+      style={{
+        background:
+          "linear-gradient(180deg, #A13A19 0%, rgba(77.48, 43.63, 32.78, 0.20) 100%)",
+      }}
+    >
+      {/* Memuat Font Stencil Asli Post No Bills Colombo */}
+      <style jsx global>{`
+        @import url('https://cdnfonts.com');
+        .font-colombo {
+          font-family: 'Post No Bills Colombo', sans-serif;
+          font-weight: 800;
+        }
+      `}</style>
 
-      {/* Grid 3 Kotak Krem */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {specs.map((item, index) => (
-          <div 
-            key={index} 
-            className="bg-[#f8c195] p-8 rounded-2xl flex flex-col space-y-4 text-black text-left shadow-xl hover:scale-[1.02] transition-transform duration-300"
-          >
-            <div className="flex items-center gap-3">
-              <span className="text-2xl">{item.icon}</span>
-              {/* Judul Kotak menggunakan Post No Bills Colombo ExtraBold */}
-              <h3 className="font-heading text-2xl uppercase tracking-wide text-orange-950">
-                {item.title}
-              </h3>
+      <div className="max-w-6xl mx-auto px-6 lg:px-12 relative z-10">
+        {/* ================= JUDUL UTAMA SPECIFICATIONS ================= */}
+        <h2 className="font-colombo text-5xl sm:text-6xl lg:text-[84px] text-[#FFF8DD] leading-none tracking-tight mb-12 text-center lg:text-left">
+          Specifications
+        </h2>
+
+        {/* ================= GRID 3 KARTU KREM (#FFCA9A) ================= */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+          {specs.map((item, index) => (
+            <div
+              key={index}
+              className="w-full h-[270px] sm:h-[294px] bg-[#FFCA9A] border-[1.29px] border-[#772219] p-6 sm:p-7 flex flex-col justify-between shadow-xl hover:-translate-y-1.5 transition-transform duration-300"
+              style={{ borderRadius: "32.27px" }}
+            >
+              {/* Ruang Kosong Atas (Untuk diisi poin detail teknis nanti) */}
+              <div className="w-full flex-1"></div>
+
+              {/* Baris Ikon & Nama Divisi di Pojok Kiri Bawah Kartu */}
+              <div className="flex items-center gap-3 pt-2">
+                <div className="w-7 h-7 relative flex-shrink-0 flex items-center justify-center">
+                  <Image
+                    src={item.icon}
+                    alt={`${item.title} Icon`}
+                    width={28}
+                    height={28}
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="font-body font-bold text-[22px] sm:text-[25px] text-[#772219] leading-none">
+                  {item.title}
+                </h3>
+              </div>
             </div>
-            
-            {/* Deskripsi otomatis menggunakan Familjen Grotesk */}
-            <p className="text-sm font-semibold text-orange-950/80 leading-relaxed">
-              {item.desc}
-            </p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
