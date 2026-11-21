@@ -42,14 +42,13 @@ export default function Specifications() {
   ];
 
   return (
-    <section
+        <section
       id="robot"
-      className="w-full relative overflow-hidden pt-16 pb-20 sm:pt-20 sm:pb-24 lg:pt-24 lg:pb-28 -mt-12 sm:-mt-14 lg:-mt-16 z-10 text-[#FFF8DD]"
+      className="w-full relative overflow-hidden pt-16 pb-20 sm:pt-20 sm:pb-24 lg:pt-24 lg:pb-28 -mt-14 sm:-mt-16 lg:-mt-16 z-10 text-[#FFF8DD]"
       style={{
         background: "linear-gradient(180deg, #9C3718 0%, #311714 100%)",
       }}
     >
-      {/* Memuat Font Stencil Asli Post No Bills Colombo */}
       <style jsx global>{`
         @import url('https://cdnfonts.com');
         .font-colombo {
@@ -58,7 +57,6 @@ export default function Specifications() {
         }
       `}</style>
 
-      {/* Pendaran cahaya lembut di sudut bawah kiri & kanan */}
       <div
         className="absolute -left-24 -bottom-24 w-[420px] h-[320px] rounded-full pointer-events-none z-0 opacity-25 blur-[90px]"
         style={{ background: "radial-gradient(circle, #E09F3E 0%, transparent 70%)" }}
@@ -68,15 +66,12 @@ export default function Specifications() {
         style={{ background: "radial-gradient(circle, #E09F3E 0%, transparent 70%)" }}
       ></div>
 
-      {/* ================= AREA KONTEN UTAMA ================= */}
       <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
         
-        {/* Judul Rata Kiri */}
         <h2 className="font-colombo text-4xl sm:text-6xl lg:text-[84px] text-[#FFF8DD] leading-none tracking-tight mb-7 sm:mb-10 lg:mb-12 text-left">
           Specifications
         </h2>
 
-        {/* ================= 1. TAMPILAN KHUSUS HP (ACCORDION CAPSULE) ================= */}
         <div className="flex flex-col gap-3.5 md:hidden">
           {specs.map((item, idx) => {
             const isOpen = openIndex === idx;
@@ -86,7 +81,6 @@ export default function Specifications() {
                 onClick={() => toggleItem(idx)}
                 className="w-full bg-[#FFCA9A] border-[1.5px] border-[#772219] rounded-[28px] px-6 py-4 text-[#772219] shadow-lg cursor-pointer transition-all duration-200 active:scale-[0.99]"
               >
-                {/* Baris Atas: Ikon + Judul + Panah Atas-Bawah */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
                     {item.icon}
@@ -95,7 +89,6 @@ export default function Specifications() {
                     </span>
                   </div>
 
-                  {/* Ikon Panah Atas & Bawah sesuai desain Figma HP */}
                   <div className="flex flex-col items-center justify-center leading-none">
                     <svg className="w-4 h-4 -mb-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="18 15 12 9 6 15" />
@@ -106,7 +99,6 @@ export default function Specifications() {
                   </div>
                 </div>
 
-                {/* Isi Detail (Muncul saat tombol diketuk di HP) */}
                 {isOpen && (
                   <div className="mt-3 pt-2.5 border-t border-[#772219]/20 pl-10">
                     <p className="font-body font-bold text-[16px] text-[#772219]">
@@ -119,7 +111,6 @@ export default function Specifications() {
           })}
         </div>
 
-        {/* ================= 2. TAMPILAN KHUSUS LAPTOP / TABLET (3 KARTU BERJEJER) ================= */}
         <div className="hidden md:grid md:grid-cols-3 gap-6 lg:gap-9">
           {specs.map((item) => (
             <div
