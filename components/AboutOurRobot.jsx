@@ -15,7 +15,7 @@ export default function AboutOurRobot() {
           alt="About Our Robot Background"
           fill
           sizes="100vw"
-          className="object-cover object-center scale-110 translate-x-0 translate-y-0 sm:translate-x-1 sm:translate-y-4 lg:translate-x-2 lg:translate-y-11"
+          className="object-cover object-center scale-110 translate-x-1 translate-y-3 sm:translate-x-1 sm:translate-y-4 lg:translate-x-2 lg:translate-y-11"
           priority
         />
       </div>
@@ -48,7 +48,7 @@ export default function AboutOurRobot() {
       </div>
 
             {/* ================= 3. GARIS PEMBATAS BAWAH ================= */}
-      <div className="w-[104%] absolute bottom-0 -left-2 translate-x-2 -translate-y-2 lg:translate-x-4 lg:-translate-y-3 z-30 pointer-events-none leading-none">
+       <div className="w-[104%] absolute bottom-0 -left-2 translate-x-1 translate-y-0 lg:translate-x-4 lg:-translate-y-3 z-30 pointer-events-none leading-none">
         <Image
           src="/images/Rectangle 17732981.png"
           alt="About Bottom Divider"

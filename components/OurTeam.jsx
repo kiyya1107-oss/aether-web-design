@@ -37,37 +37,36 @@ export default function OurTeam() {
     },
   ];
 
-  // Urutan khusus untuk tampilan HP (1 kolom vertikal sesuai gambar desain HP)
   const mobileMembers = [
     {
       name: "Bhrama Maheswara As Siddiq",
       position: "Programming",
-      image: "/images/bhrama.png",
+      image: "/images/bhrama.jpeg",
     },
     {
       name: "Kurnia Larasing Arti",
       position: "Admin and Finance",
-      image: "/images/laras.png",
+      image: "/images/laras.jpeg",
     },
     {
       name: "Faris Nauval Rizqullah",
       position: "Mechanical",
-      image: "/images/faris.png",
+      image: "/images/faris.jpeg",
     },
     {
       name: "Manik Fabianus Christoper",
       position: "Electrical",
-      image: "/images/bian.png",
+      image: "/images/bian.jpeg",
     },
     {
       name: "Muhammad Damai Abdullah",
       position: "Media Creative",
-      image: "/images/damai.png",
+      image: "/images/damai.jpeg",
     },
     {
       name: "Dzakiyyah Sayidatun Nisa",
       position: "Web Development",
-      image: "/images/aku.png",
+      image: "/images/aku.jpeg",
     },
   ];
 
@@ -80,7 +79,6 @@ export default function OurTeam() {
           "linear-gradient(1deg, #702215 0%, #5C1C13 50%, rgba(72, 21, 17, 0) 100%)",
       }}
     >
-      {/* Memuat Font Stencil Asli Post No Bills Colombo */}
       <style jsx global>{`
         @import url('https://cdnfonts.com');
         .font-colombo {
@@ -89,7 +87,6 @@ export default function OurTeam() {
         }
       `}</style>
 
-      {/* ================= PENDARAN CAHAYA LATAR ================= */}
       <div
         className="absolute -left-32 top-16 w-[400px] lg:w-[650px] h-[400px] lg:h-[650px] rounded-full pointer-events-none z-0 opacity-45 blur-[90px] lg:blur-[110px]"
         style={{
@@ -105,14 +102,12 @@ export default function OurTeam() {
         }}
       ></div>
 
-      {/* ================= AREA KONTEN UTAMA ================= */}
       <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
         {/* Judul Utama Our Team */}
         <h2 className="font-colombo text-4xl sm:text-6xl lg:text-[84px] text-[#FFF8DD] leading-none tracking-tight mb-7 sm:mb-10 lg:mb-12 text-left">
           Our Team
         </h2>
 
-        {/* ================= 1. TAMPILAN KHUSUS HP (FOTO KIRI + KOTAK NAMA KANAN) ================= */}
         <div className="flex flex-col gap-5 md:hidden">
           {mobileMembers.map((member, index) => (
             <div key={index} className="w-full flex items-center gap-3.5">
@@ -127,7 +122,6 @@ export default function OurTeam() {
                 />
               </div>
 
-              {/* Kartu Nama & Divisi di Sebelah Kanan (Sudut Kanan Membulat) */}
               <div
                 className="flex-1 min-h-[76px] px-4 py-3 border border-[#FFCA9A]/25 flex flex-col justify-center text-left"
                 style={{
@@ -148,7 +142,6 @@ export default function OurTeam() {
           ))}
         </div>
 
-        {/* ================= 2. TAMPILAN KHUSUS LAPTOP / TABLET (3 KOLOM x 2 BARIS) ================= */}
         <div className="hidden md:grid md:grid-cols-3 gap-6 lg:gap-8">
           {desktopMembers.map((member, index) => (
             <div

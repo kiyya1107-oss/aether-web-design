@@ -48,7 +48,7 @@ export default function SponsorsSection() {
 
         <div className="w-full flex justify-center md:hidden">
           <Image
-            src="/images/sponsors-logos-mobile.png"
+            src="/images/Group 48098198.png"
             alt="Our Sponsors Logos Mobile"
             width={450}
             height={650}
