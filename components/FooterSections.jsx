@@ -133,7 +133,7 @@ export default function FooterSections() {
       <footer className="w-full relative -mt-16 sm:-mt-20 lg:-mt-24 z-20 py-6 sm:py-10 lg:py-12 bg-[#6D2118]">
         <div className="max-w-5xl mx-auto px-4 sm:px-8 lg:px-12 flex flex-row items-center justify-between gap-4">
           <Image
-            src="/images/rectangle 17733019.png"
+            src="/images/Rectangle 17733019.png"
             alt="AETHER Footer Logo"
             width={87}
             height={92}

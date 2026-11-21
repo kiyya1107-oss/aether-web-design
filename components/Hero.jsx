@@ -32,7 +32,7 @@ export default function Hero() {
       {/* ================= 2. LOGO TIM DI POJOK KANAN ATAS (rectangle 17733019) ================= */}
       <div className="absolute top-3 right-3 sm:top-5 sm:right-6 lg:top-6 lg:right-10 z-30 pointer-events-none">
         <Image
-          src="/images/rectangle 17733019.png"
+          src="/images/Rectangle 17733019.png"
           alt="Team Logo Top Right"
           width={87}
           height={92}
@@ -117,7 +117,7 @@ export default function Hero() {
                 {/* ================= 3. GARIS PEMBATAS BAWAH HERO (Menempel penuh dari pinggir kiri layar) ================= */}
       <div className="w-[102%] absolute bottom-0 left-0 -translate-x-1 z-30 pointer-events-none leading-none">
         <Image
-          src="/images/rectangle 17732977.png"
+          src="/images/Rectangle 17732977.png"
           alt="Hero Bottom Divider"
           width={1439}
           height={93}
