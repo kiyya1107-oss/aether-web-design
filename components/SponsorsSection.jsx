@@ -8,7 +8,6 @@ export default function SponsorsSection() {
       id="sponsor"
       className="w-full relative overflow-hidden py-16 sm:py-24 lg:py-28 text-[#FFF8DD] z-10 bg-[#3a1612]"
     >
-      {/* Memuat Font Stencil Asli Post No Bills Colombo */}
       <style jsx global>{`
         @import url('https://cdnfonts.com');
         .font-colombo {
@@ -17,7 +16,6 @@ export default function SponsorsSection() {
         }
       `}</style>
 
-      {/* ================= 1. GARIS ATAS ORANYE (Dinaikkan ke top-0) ================= */}
       <div
         className="w-full h-[10px] sm:h-[15px] absolute top-0 left-0 z-20"
         style={{
@@ -25,7 +23,6 @@ export default function SponsorsSection() {
         }}
       ></div>
 
-      {/* ================= 2. BACKGROUND UTAMA (Dinaikkan ke atas dengan -translate-y-4) ================= */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
         <Image
           src="/images/Group 48098074.png"
@@ -37,8 +34,7 @@ export default function SponsorsSection() {
         />
       </div>
 
-      {/* ================= 3. AREA KONTEN UTAMA ================= */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
         
         {/* Judul & Subjudul */}
         <div className="text-left mb-8 sm:mb-12 lg:mb-14">
@@ -50,11 +46,20 @@ export default function SponsorsSection() {
           </p>
         </div>
 
-        {/* Grup Gambar Susunan 16 Kotak Logo (Group 48098198.png) */}
-        <div className="w-full max-w-4xl mx-auto flex justify-center">
+        <div className="w-full flex justify-center md:hidden">
+          <Image
+            src="/images/sponsors-logos-mobile.png"
+            alt="Our Sponsors Logos Mobile"
+            width={450}
+            height={650}
+            className="w-full h-auto object-contain drop-shadow-2xl"
+          />
+        </div>
+
+        <div className="hidden md:flex w-full max-w-4xl mx-auto justify-center">
           <Image
             src="/images/Group 48098198.png"
-            alt="Our Sponsors Logos"
+            alt="Our Sponsors Logos Desktop"
             width={1100}
             height={650}
             className="w-full h-auto object-contain drop-shadow-2xl"
@@ -63,7 +68,6 @@ export default function SponsorsSection() {
 
       </div>
 
-      {/* ================= 4. GARIS PEMBATAS BAWAH (Ikut dinaikkan ke bottom-4) ================= */}
       <div
         className="w-full h-[10px] sm:h-[15px] absolute bottom-4 left-0 z-20"
         style={{

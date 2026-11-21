@@ -46,7 +46,7 @@ export default function FooterSections() {
         }
       `}</style>
 
-            {/* FORMULIR GET IN TOUCH */}
+            {/* GET IN TOUCH */}
       <section 
       id="contact" 
       className="w-full relative -mt-12 sm:-mt-16 lg:-mt-20 z-20 py-16 sm:py-24 lg:py-28 bg-[#2F0C0A] overflow-hidden">
@@ -128,7 +128,6 @@ export default function FooterSections() {
         </div>
       </section>
 
-          {/* FOOTER BAWAH (Full lebar ujung ke ujung & logo lebih ke pojok kiri) */}
       <footer className="w-full relative -mt-12 sm:-mt-16 lg:-mt-20 z-20 py-7 sm:py-11 lg:py-14 bg-[#702218] rounded-b-[28px] sm:rounded-b-[44px] lg:rounded-b-[56px] shadow-2xl">
         <div className="w-full px-4 sm:px-6 lg:px-8 flex flex-row items-center justify-between gap-4">
           <Image

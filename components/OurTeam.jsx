@@ -3,9 +3,8 @@
 import Image from "next/image";
 
 export default function OurTeam() {
-  // Urutan kartu disesuaikan persis dengan desain Figma (Baris 1: Bhrama, Manik, Faris | Baris 2: Damai, Kurnia, Dzakiyyah)
-  // Nama file gambar menggunakan nama persis seperti di dalam kurung: bhrama, bian, faris, damai, laras, aku
-  const teamMembers = [
+  // Urutan untuk tampilan Laptop (3 kolom x 2 baris sesuai desain desktop)
+  const desktopMembers = [
     {
       name: "Bhrama Maheswara As Siddiq",
       position: "Programming",
@@ -38,6 +37,40 @@ export default function OurTeam() {
     },
   ];
 
+  // Urutan khusus untuk tampilan HP (1 kolom vertikal sesuai gambar desain HP)
+  const mobileMembers = [
+    {
+      name: "Bhrama Maheswara As Siddiq",
+      position: "Programming",
+      image: "/images/bhrama.png",
+    },
+    {
+      name: "Kurnia Larasing Arti",
+      position: "Admin and Finance",
+      image: "/images/laras.png",
+    },
+    {
+      name: "Faris Nauval Rizqullah",
+      position: "Mechanical",
+      image: "/images/faris.png",
+    },
+    {
+      name: "Manik Fabianus Christoper",
+      position: "Electrical",
+      image: "/images/bian.png",
+    },
+    {
+      name: "Muhammad Damai Abdullah",
+      position: "Media Creative",
+      image: "/images/damai.png",
+    },
+    {
+      name: "Dzakiyyah Sayidatun Nisa",
+      position: "Web Development",
+      image: "/images/aku.png",
+    },
+  ];
+
   return (
     <section
       id="team"
@@ -56,7 +89,7 @@ export default function OurTeam() {
         }
       `}</style>
 
-      {/* ================= PENDARAN CAHAYA LATAR KIRI & KANAN ================= */}
+      {/* ================= PENDARAN CAHAYA LATAR ================= */}
       <div
         className="absolute -left-32 top-16 w-[400px] lg:w-[650px] h-[400px] lg:h-[650px] rounded-full pointer-events-none z-0 opacity-45 blur-[90px] lg:blur-[110px]"
         style={{
@@ -73,18 +106,54 @@ export default function OurTeam() {
       ></div>
 
       {/* ================= AREA KONTEN UTAMA ================= */}
-      <div className="max-w-6xl mx-auto px-3 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
         {/* Judul Utama Our Team */}
-        <h2 className="font-colombo text-4xl sm:text-6xl lg:text-[84px] text-[#FFF8DD] leading-none tracking-tight mb-6 sm:mb-10 lg:mb-12 text-left">
+        <h2 className="font-colombo text-4xl sm:text-6xl lg:text-[84px] text-[#FFF8DD] leading-none tracking-tight mb-7 sm:mb-10 lg:mb-12 text-left">
           Our Team
         </h2>
 
-        {/* Grid 6 Kartu Anggota (Selalu 3 Kolom x 2 Baris di HP maupun Laptop agar 11/12) */}
-        <div className="grid grid-cols-3 gap-2.5 sm:gap-5 lg:gap-8">
-          {teamMembers.map((member, index) => (
+        {/* ================= 1. TAMPILAN KHUSUS HP (FOTO KIRI + KOTAK NAMA KANAN) ================= */}
+        <div className="flex flex-col gap-5 md:hidden">
+          {mobileMembers.map((member, index) => (
+            <div key={index} className="w-full flex items-center gap-3.5">
+              {/* Foto Bulat di Sebelah Kiri */}
+              <div className="w-[82px] h-[82px] bg-[#D9D9D9] rounded-full relative overflow-hidden shadow-lg flex-shrink-0">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  sizes="82px"
+                  className="object-cover object-top"
+                />
+              </div>
+
+              {/* Kartu Nama & Divisi di Sebelah Kanan (Sudut Kanan Membulat) */}
+              <div
+                className="flex-1 min-h-[76px] px-4 py-3 border border-[#FFCA9A]/25 flex flex-col justify-center text-left"
+                style={{
+                  background:
+                    "linear-gradient(90deg, rgba(255, 202, 154, 0.14) 0%, rgba(255, 186, 125, 0.08) 50%, rgba(255, 166, 86, 0.22) 100%)",
+                  boxShadow: "4px 4px 10px rgba(0, 0, 0, 0.2)",
+                  borderRadius: "10px 26px 26px 10px",
+                }}
+              >
+                <h3 className="font-body font-bold text-[14px] text-[#FFF8DD] leading-snug">
+                  {member.name}
+                </h3>
+                <p className="font-body font-normal text-[12px] text-[#FFF8DD]/90 leading-snug mt-0.5">
+                  {member.position}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* ================= 2. TAMPILAN KHUSUS LAPTOP / TABLET (3 KOLOM x 2 BARIS) ================= */}
+        <div className="hidden md:grid md:grid-cols-3 gap-6 lg:gap-8">
+          {desktopMembers.map((member, index) => (
             <div
               key={index}
-              className="w-full py-4 sm:py-7 lg:py-8 px-2 sm:px-5 border border-[#FFCA9A]/25 flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-1.5"
+              className="w-full py-7 lg:py-8 px-5 border border-[#FFCA9A]/25 flex flex-col items-center justify-center text-center transition-transform duration-300 hover:-translate-y-1.5"
               style={{
                 background:
                   "linear-gradient(180deg, rgba(255, 202, 154, 0.17) 0%, rgba(255, 186.63, 124.71, 0) 43%, rgba(255, 166.48, 86.31, 0.17) 100%)",
@@ -92,24 +161,21 @@ export default function OurTeam() {
                 borderRadius: "24px",
               }}
             >
-              {/* Lingkaran Foto Profil (135px di laptop) */}
-              <div className="w-[62px] h-[62px] sm:w-[105px] sm:h-[105px] lg:w-[135px] lg:h-[135px] bg-[#D9D9D9] rounded-full mb-2.5 sm:mb-4 lg:mb-5 relative overflow-hidden shadow-md flex-shrink-0">
+              <div className="w-[115px] h-[115px] lg:w-[135px] lg:h-[135px] bg-[#D9D9D9] rounded-full mb-4 lg:mb-5 relative overflow-hidden shadow-md flex-shrink-0">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
-                  sizes="(max-width: 640px) 64px, 135px"
+                  sizes="135px"
                   className="object-cover object-top"
                 />
               </div>
 
-              {/* Nama Lengkap Anggota */}
-              <h3 className="font-body font-bold text-[11px] sm:text-[18px] lg:text-[24px] text-[#FFF8DD] leading-tight capitalize">
+              <h3 className="font-body font-bold text-[19px] lg:text-[24px] text-[#FFF8DD] leading-tight capitalize">
                 {member.name}
               </h3>
 
-              {/* Divisi / Jabatan */}
-              <p className="font-body font-normal text-[9px] sm:text-[14px] lg:text-[19px] text-[#FFF8DD]/90 leading-snug mt-0.5 sm:mt-1 capitalize">
+              <p className="font-body font-normal text-[15px] lg:text-[19px] text-[#FFF8DD]/90 leading-snug mt-1 capitalize">
                 {member.position}
               </p>
             </div>

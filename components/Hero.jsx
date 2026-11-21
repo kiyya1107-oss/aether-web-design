@@ -63,10 +63,10 @@ export default function Hero() {
       </nav>
 
       {/* ================= AREA KONTEN UTAMA HERO (SEJAJAR KIRI-KANAN DI HP MAUPUN LAPTOP) ================= */}
-      <div className="max-w-6xl mx-auto w-full px-4 sm:px-8 lg:px-12 flex flex-row items-center justify-between gap-3 sm:gap-8 lg:gap-10 pt-4 pb-12 sm:pt-6 sm:pb-20 lg:pt-8 lg:pb-32 relative z-20 my-auto">
+      <div className="max-w-6xl mx-auto w-full px-4 sm:px-8 lg:px-12 flex flex-row items-center justify-between gap-2 sm:gap-6 lg:gap-8 pt-4 pb-12 sm:pt-6 sm:pb-20 lg:pt-8 lg:pb-28 relative z-20 my-auto">
         
         {/* SISI KIRI: IDENTITAS TIM AETHER & TAGLINE */}
-        <div className="flex flex-col space-y-0.5 sm:space-y-1 w-[52%] lg:max-w-xl text-left relative z-10">
+        <div className="flex flex-col space-y-0.5 sm:space-y-1 w-[50%] lg:max-w-xl text-left relative z-10">
           <span className="text-[#FFF8DD] font-semibold text-[9px] sm:text-sm lg:text-[20px] tracking-wider font-body uppercase">
             ROBOTIC RESEARCH TEAM
           </span>
@@ -81,40 +81,48 @@ export default function Hero() {
             className="font-colombo text-xl sm:text-4xl lg:text-[64px] text-[#FFF8DD] leading-none tracking-[1.5px] sm:tracking-[4px] pt-0.5 sm:pt-1"
             style={{ textShadow: "0px 3px 5px rgba(0, 0, 0, 0.65)" }}
           >
-            Robot Name
+            Ander Wanmil
           </h2>
 
           <p className="font-body text-[10px] sm:text-base lg:text-[21px] font-normal text-[#FFF8DD]/90 pt-1 sm:pt-3 leading-tight">
             Precision in Motion, Innovation In Action
           </p>
 
-          <div className="pt-2 sm:pt-5 lg:pt-7 flex justify-start">
+          {/* TOMBOL DISCOVER OUR ROBOT + IKON PANAH */}
+          <div className="pt-2.5 sm:pt-5 lg:pt-7 flex justify-start">
             <a
               href="#about"
-              className="w-[100px] sm:w-[150px] lg:w-[175px] h-[28px] sm:h-[42px] lg:h-[48px] text-[#FFFCF2] font-body font-semibold text-[11px] sm:text-[15px] lg:text-[17px] rounded-full transition-transform hover:scale-105 flex items-center justify-center shadow-xl"
+              className="w-[125px] sm:w-[190px] lg:w-[235px] h-[30px] sm:h-[44px] lg:h-[52px] px-3 sm:px-5 text-[#FFFCF2] font-body font-semibold text-[10px] sm:text-[15px] lg:text-[18px] rounded-full transition-transform hover:scale-105 flex items-center justify-center gap-1.5 sm:gap-2.5 lg:gap-3 shadow-xl group whitespace-nowrap"
               style={{
                 background: "linear-gradient(90deg, #F67301 0%, #9e3914 100%)",
               }}
             >
-              Learn More
+              <span>Discover Our Robot</span>
+              <Image
+                src="/images/akar-icons_arrow-right.png"
+                alt="Arrow Right"
+                width={20}
+                height={20}
+                className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 group-hover:translate-x-1 transition-transform object-contain flex-shrink-0"
+              />
             </a>
           </div>
         </div>
 
-        {/* SISI KANAN: BINGKAI UTAMA FOTO/RENDER ROBOT */}
-        <div className="w-[46%] lg:w-full lg:max-w-[540px] aspect-[16/10.5] relative z-20 flex items-center justify-center">
-          <div
-            className="w-full h-full bg-[#D3D9E7] border-[2.5px] sm:border-[4.5px] border-[#FFFCF2] shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden flex items-center justify-center"
-            style={{ borderRadius: "16px" }}
-          >
-            <span className="text-[#110502]/30 font-colombo text-[10px] sm:text-sm lg:text-lg uppercase tracking-widest text-center px-1">
-              [ Image Place ]
-            </span>
-          </div>
+        {/* SISI KANAN: GAMBAR RENDER ROBOT TANPA BINGKAI KOTAK (bagian hero.png - 886 x 591) */}
+        <div className="w-[50%] lg:w-[54%] relative z-20 flex items-center justify-end">
+          <Image
+            src="/images/bagian hero.png"
+            alt="Ander Wanmil Robotic Arm"
+            width={886}
+            height={591}
+            className="w-full h-auto object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.65)] scale-105 lg:scale-110"
+            priority
+          />
         </div>
       </div>
 
-                {/* ================= 3. GARIS PEMBATAS BAWAH HERO (Menempel penuh dari pinggir kiri layar) ================= */}
+      {/* ================= 3. GARIS PEMBATAS BAWAH HERO ================= */}
       <div className="w-[102%] absolute bottom-0 left-0 -translate-x-1 z-30 pointer-events-none leading-none">
         <Image
           src="/images/Rectangle 17732977.png"

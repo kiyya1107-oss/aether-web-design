@@ -44,7 +44,7 @@ export default function Specifications() {
   return (
     <section
       id="robot"
-      className="w-full relative overflow-hidden pt-16 pb-20 sm:pt-20 sm:pb-24 lg:pt-24 lg:pb-28 -mt-8 z-10 text-[#FFF8DD]"
+      className="w-full relative overflow-hidden pt-16 pb-20 sm:pt-20 sm:pb-24 lg:pt-24 lg:pb-28 -mt-12 sm:-mt-14 lg:-mt-16 z-10 text-[#FFF8DD]"
       style={{
         background: "linear-gradient(180deg, #9C3718 0%, #311714 100%)",
       }}
